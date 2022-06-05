@@ -12,19 +12,28 @@ public class Main {
             System.out.println("Wat is het gewicht?");
             Integer gewicht = scanner.nextInt();
             Was was = new Was(gewicht, kleur, materiaal);
+            Integer tijdsduur = 0;
             if (was.getMateriaal().equalsIgnoreCase("katoen")) {
                 Programma programma = new Katoenprogramma();
                 programma.basisProgramma();
+                tijdsduur = programma.getTijdsduur();
             }
             else if (was.getMateriaal().equalsIgnoreCase("wol")) {
                 Programma programma = new Wolprogramma();
                 programma.basisProgramma();
-                System.out.printf(String.valueOf(programma));
+                tijdsduur = programma.getTijdsduur();
             }
             else if (was.getMateriaal().equalsIgnoreCase("fijn")) {
                 Programma programma = new Fijnprogramma();
                 programma.basisProgramma();
+                tijdsduur = programma.getTijdsduur();
             }
+            Wasprogramma wasprogramma = new Wasprogramma();
+            wasprogramma.setTimerTijd();
+            Integer timerTijd = wasprogramma.getTimerTijd();
+            WasmachineX wasmachineX = new WasmachineX(timerTijd, tijdsduur);
+            wasmachineX.wassen();
+            wasmachineX.printEindtijd();
             break;
         }
     }

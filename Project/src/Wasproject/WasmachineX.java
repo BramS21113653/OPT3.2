@@ -1,29 +1,31 @@
 package Wasproject;
 
+import javax.sound.midi.Soundbank;
 import java.util.*;
 
 public class WasmachineX implements IWassen{
-    Scanner scanner = new Scanner(System.in);
+    private Integer timerTijd;
+    private Integer tijdsDuur;
 
-    private Date huidigeTijd;
-    private Date eindTijd;
-    private Date resterendeTijd;
-
-    @Override
-    public String Wassen() {
-        return "De was is begonnen om: " + this.huidigeTijd;
+    public WasmachineX(Integer timerTijd, Integer tijdsDuur) {
+        this.timerTijd = timerTijd;
+        this.tijdsDuur = tijdsDuur;
     }
 
     @Override
-    public String printEindtijd() {
-        ///todo
-        return null;
+    public void wassen() {
+        Calendar calendar = Calendar.getInstance();
+        Date huidigeTijd = calendar.getTime();
+        System.out.println("De was is begonnen om: " + huidigeTijd);
     }
 
     @Override
-    public String printResterend() {
-        ///todo
-        return null;
+    public void printEindtijd() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.HOUR_OF_DAY, this.timerTijd);
+        //todo onder fix tijdsduur want is in minuten...
+        calendar.add(Calendar.HOUR_OF_DAY, this.tijdsDuur);
+        Date eindTijd = calendar.getTime();
+        System.out.println("De was is klaar om: " + eindTijd);
     }
-
 }
