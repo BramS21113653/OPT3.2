@@ -22,8 +22,8 @@ public class Main {
                 Integer timerTijd = wasprogramma.getTimerTijd();
                 System.out.println(wasprogramma);
                 WasmachineX wasmachineX = new WasmachineX(wasprogramma);
-                wasmachineX.wassen();
-                wasmachineX.printEindtijd();
+                System.out.println(wasmachineX.wassen());
+                System.out.println(wasmachineX.printEindtijd());
             }
             else if (was.getMateriaal().equalsIgnoreCase("wol")) {
                 Wolprogramma programma = new Wolprogramma();
@@ -34,8 +34,9 @@ public class Main {
                 Integer timerTijd = wasprogramma.getTimerTijd();
                 System.out.println(wasprogramma);
                 WasmachineX wasmachineX = new WasmachineX(wasprogramma);
-                wasmachineX.wassen();
-                wasmachineX.printEindtijd();            }
+                System.out.println(wasmachineX.wassen());
+                System.out.println(wasmachineX.printEindtijd());
+            }
             else if (was.getMateriaal().equalsIgnoreCase("fijn")) {
                 Fijnprogramma programma = new Fijnprogramma();
                 programma.basisProgramma();
@@ -45,8 +46,8 @@ public class Main {
                 Integer timerTijd = wasprogramma.getTimerTijd();
                 System.out.println(wasprogramma);
                 WasmachineX wasmachineX = new WasmachineX(wasprogramma);
-                wasmachineX.wassen();
-                wasmachineX.printEindtijd();
+                System.out.println(wasmachineX.wassen());
+                System.out.println(wasmachineX.printEindtijd());
             }
             break;
         }

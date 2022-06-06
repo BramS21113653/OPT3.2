@@ -10,19 +10,19 @@ public class WasmachineX implements IWassen{
     }
 
     @Override
-    public void wassen() {
+    public String wassen() {
         Calendar calendar = Calendar.getInstance();
-        Date huidigeTijd = calendar.getTime();
-        System.out.println("De was is begonnen om: " + huidigeTijd);
+        calendar.add(Calendar.HOUR_OF_DAY, wasprogramma.getTimerTijd());
+        Date startTijd = calendar.getTime();
+        return "De was begint om: " + startTijd;
     }
 
     @Override
-    public void printEindtijd() {
+    public String printEindtijd() {
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.HOUR_OF_DAY, wasprogramma.getTimerTijd());
-        //todo onder fix tijdsduur want is in minuten...
         calendar.add(Calendar.HOUR_OF_DAY, (wasprogramma.getProgramma().getTijdsduur()));
         Date eindTijd = calendar.getTime();
-        System.out.println("De was is klaar om: " + eindTijd);
+        return "De was is klaar om: " + eindTijd;
     }
 }

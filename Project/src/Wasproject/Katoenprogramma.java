@@ -16,9 +16,9 @@ public class Katoenprogramma extends Programma {
 
     @Override
     public void setTijdsduur() {
-        if (super.kort = true) {
+        if (super.kort == true) {
             super.tijdsduur = 1;
-        } else if (super.kort = false) { super.tijdsduur = 2;}
+        } else if (super.kort == false) { super.tijdsduur = 2;}
     }
 
     @Override

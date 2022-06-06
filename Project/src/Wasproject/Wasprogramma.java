@@ -22,7 +22,8 @@ public class Wasprogramma {
     }
 
     public void setTimerTijd() {
-        System.out.println("Kies uw timer (getal in uren)");
+        System.out.println("Kies uw timer (0 - 12) (kies 0 om de was nu te starten)" +
+                "\n(Getal in uren, hoelang het duurt voordat de was mag beginnen...)");
         Integer timerTijd = scanner.nextInt();
         this.timerTijd = timerTijd;
     }
@@ -36,11 +37,11 @@ public class Wasprogramma {
         return "De was\nMateriaal: " + was.getMateriaal() +
                 "\nKleur: " + was.getKleur() +
                 "\nGewicht: " + was.getGewicht() +
-                "\nHet programma\nTemperatuur: " + programma.getTemperatuur() +
+                "\n\nHet programma\nTemperatuur: " + programma.getTemperatuur() +
                 "\nToeren: " + programma.getToeren() +
                 "\nTijdsduur: " + programma.getTijdsduur() +
                 "\nExtra water: " + programma.getExtraWater() +
                 "\nKort: " + programma.getKort() +
-                "\nDe was begint over: " + this.timerTijd + " uur!";
+                "\n\nDe was begint over: " + this.timerTijd + " uur!\n";
     }
 }
