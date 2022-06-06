@@ -21,7 +21,7 @@ public class WasmachineX implements IWassen{
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.HOUR_OF_DAY, wasprogramma.getTimerTijd());
         //todo onder fix tijdsduur want is in minuten...
-        calendar.add(Calendar.HOUR_OF_DAY, wasprogramma.getProgramma().getTijdsduur());
+        calendar.add(Calendar.HOUR_OF_DAY, (wasprogramma.getProgramma().getTijdsduur()));
         Date eindTijd = calendar.getTime();
         System.out.println("De was is klaar om: " + eindTijd);
     }

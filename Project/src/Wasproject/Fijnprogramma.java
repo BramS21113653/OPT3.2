@@ -17,8 +17,8 @@ public class Fijnprogramma extends Programma {
     @Override
     public void setTijdsduur() {
             if (super.kort = true) {
-                super.tijdsduur = 45;
-            } else if (super.kort = false) {super.tijdsduur = 60;}
+                super.tijdsduur = 1;
+            } else if (super.kort = false) {super.tijdsduur = 2;}
     }
 
     @Override

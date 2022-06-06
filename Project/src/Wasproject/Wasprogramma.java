@@ -32,8 +32,15 @@ public class Wasprogramma {
     }
 
     @Override
-    //todo
     public String toString() {
-        return null;
+        return "De was\nMateriaal: " + was.getMateriaal() +
+                "\nKleur: " + was.getKleur() +
+                "\nGewicht: " + was.getGewicht() +
+                "\nHet programma\nTemperatuur: " + programma.getTemperatuur() +
+                "\nToeren: " + programma.getToeren() +
+                "\nTijdsduur: " + programma.getTijdsduur() +
+                "\nExtra water: " + programma.getExtraWater() +
+                "\nKort: " + programma.getKort() +
+                "\nDe was begint over: " + this.timerTijd + " uur!";
     }
 }

@@ -14,8 +14,8 @@ public class Wolprogramma extends Programma{
 
     @Override
     public void setTijdsduur() {
-        System.out.println("Een wolprogramma duurt altijd 45 minuten!");
-        super.tijdsduur = 45;
+        System.out.println("Een wolprogramma duurt altijd 1 uur!");
+        super.tijdsduur = 1;
     }
 
     @Override

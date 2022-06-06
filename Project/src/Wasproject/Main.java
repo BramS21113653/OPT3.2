@@ -20,6 +20,7 @@ public class Main {
                 Wasprogramma wasprogramma = new Wasprogramma(was, programma);
                 wasprogramma.setTimerTijd();
                 Integer timerTijd = wasprogramma.getTimerTijd();
+                System.out.println(wasprogramma);
                 WasmachineX wasmachineX = new WasmachineX(wasprogramma);
                 wasmachineX.wassen();
                 wasmachineX.printEindtijd();
@@ -31,6 +32,7 @@ public class Main {
                 Wasprogramma wasprogramma = new Wasprogramma(was, programma);
                 wasprogramma.setTimerTijd();
                 Integer timerTijd = wasprogramma.getTimerTijd();
+                System.out.println(wasprogramma);
                 WasmachineX wasmachineX = new WasmachineX(wasprogramma);
                 wasmachineX.wassen();
                 wasmachineX.printEindtijd();            }
@@ -41,6 +43,7 @@ public class Main {
                 Wasprogramma wasprogramma = new Wasprogramma(was, programma);
                 wasprogramma.setTimerTijd();
                 Integer timerTijd = wasprogramma.getTimerTijd();
+                System.out.println(wasprogramma);
                 WasmachineX wasmachineX = new WasmachineX(wasprogramma);
                 wasmachineX.wassen();
                 wasmachineX.printEindtijd();
