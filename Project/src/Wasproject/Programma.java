@@ -5,11 +5,11 @@ import java.util.Scanner;
 public abstract class Programma {
     Scanner scanner = new Scanner(System.in);
 
-    private Integer temperatuur;
-    private Integer toeren;
-    private Integer tijdsduur;
-    private boolean kort;
-    private boolean extraWater;
+    protected Integer temperatuur;
+    protected Integer toeren;
+    protected Integer tijdsduur;
+    protected boolean kort;
+    protected boolean extraWater;
 
     public final void basisProgramma() {
         setTemperatuur();

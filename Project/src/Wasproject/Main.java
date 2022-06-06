@@ -14,26 +14,37 @@ public class Main {
             Was was = new Was(gewicht, kleur, materiaal);
             Integer tijdsduur = 0;
             if (was.getMateriaal().equalsIgnoreCase("katoen")) {
-                Programma programma = new Katoenprogramma();
+                Katoenprogramma programma = new Katoenprogramma();
                 programma.basisProgramma();
                 tijdsduur = programma.getTijdsduur();
+                Wasprogramma wasprogramma = new Wasprogramma(was, programma);
+                wasprogramma.setTimerTijd();
+                Integer timerTijd = wasprogramma.getTimerTijd();
+                WasmachineX wasmachineX = new WasmachineX(wasprogramma);
+                wasmachineX.wassen();
+                wasmachineX.printEindtijd();
             }
             else if (was.getMateriaal().equalsIgnoreCase("wol")) {
-                Programma programma = new Wolprogramma();
+                Wolprogramma programma = new Wolprogramma();
                 programma.basisProgramma();
                 tijdsduur = programma.getTijdsduur();
-            }
+                Wasprogramma wasprogramma = new Wasprogramma(was, programma);
+                wasprogramma.setTimerTijd();
+                Integer timerTijd = wasprogramma.getTimerTijd();
+                WasmachineX wasmachineX = new WasmachineX(wasprogramma);
+                wasmachineX.wassen();
+                wasmachineX.printEindtijd();            }
             else if (was.getMateriaal().equalsIgnoreCase("fijn")) {
-                Programma programma = new Fijnprogramma();
+                Fijnprogramma programma = new Fijnprogramma();
                 programma.basisProgramma();
                 tijdsduur = programma.getTijdsduur();
+                Wasprogramma wasprogramma = new Wasprogramma(was, programma);
+                wasprogramma.setTimerTijd();
+                Integer timerTijd = wasprogramma.getTimerTijd();
+                WasmachineX wasmachineX = new WasmachineX(wasprogramma);
+                wasmachineX.wassen();
+                wasmachineX.printEindtijd();
             }
-            Wasprogramma wasprogramma = new Wasprogramma();
-            wasprogramma.setTimerTijd();
-            Integer timerTijd = wasprogramma.getTimerTijd();
-            WasmachineX wasmachineX = new WasmachineX(timerTijd, tijdsduur);
-            wasmachineX.wassen();
-            wasmachineX.printEindtijd();
             break;
         }
     }
