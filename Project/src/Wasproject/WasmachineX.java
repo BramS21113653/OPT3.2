@@ -11,7 +11,7 @@ public class WasmachineX implements IWassen{
 
     @Override
     public String wassen() {
-        Calendar calendar = Calendar.getInstance();
+        Calendar calendar = getHuidigeTijd();
         calendar.add(Calendar.HOUR_OF_DAY, wasprogramma.getTimerTijd());
         Date startTijd = calendar.getTime();
         return "De was begint om: " + startTijd;
@@ -19,10 +19,15 @@ public class WasmachineX implements IWassen{
 
     @Override
     public String printEindtijd() {
-        Calendar calendar = Calendar.getInstance();
+        Calendar calendar = getHuidigeTijd();
         calendar.add(Calendar.HOUR_OF_DAY, wasprogramma.getTimerTijd());
         calendar.add(Calendar.HOUR_OF_DAY, (wasprogramma.getProgramma().getTijdsduur()));
         Date eindTijd = calendar.getTime();
         return "De was is klaar om: " + eindTijd;
+    }
+
+    @Override
+    public Calendar getHuidigeTijd() {
+        return Calendar.getInstance();
     }
 }
