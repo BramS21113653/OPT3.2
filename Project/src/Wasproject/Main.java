@@ -20,9 +20,9 @@ public class Main {
             else if (was.getMateriaal().equalsIgnoreCase("wol")) {
                 programma = new Wolprogramma();
             }
-            else if (was.getMateriaal().equalsIgnoreCase("fijn")) {
-                programma = new Fijnprogramma();
-            }
+//            else if (was.getMateriaal().equalsIgnoreCase("fijn")) {
+//                programma = new Fijnprogramma();
+//            }
             programma.basisProgramma();
             tijdsduur = programma.getTijdsduur();
             Wasprogramma wasprogramma = new Wasprogramma(was, programma);
