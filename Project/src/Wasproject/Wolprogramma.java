@@ -1,10 +1,6 @@
 package Wasproject;
 
 public class Wolprogramma extends Programma{
-    private Integer temperatuur;
-    private Integer toeren;
-    private Integer tijdsduur;
-    private boolean kort;
 
     @Override
     public void setKort() {

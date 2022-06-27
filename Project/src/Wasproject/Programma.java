@@ -28,7 +28,6 @@ public abstract class Programma {
     abstract void setTemperatuur();
 
     final void setExtraWater() {
-        //todo check waar het wordt opgeslagen
         System.out.println("Wilt u extra water toevoegen? (j/n)");
         String antwoordExtraWater = scanner.nextLine();
         if (antwoordExtraWater.equalsIgnoreCase("j")) {
